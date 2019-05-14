@@ -5,6 +5,17 @@ const Header = props => {
   return (
     <header>
       <nav>
+        <ul>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
