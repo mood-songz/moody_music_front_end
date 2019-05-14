@@ -29,13 +29,9 @@ class Playlist extends React.Component {
       return (
         <>
           <button onClick={this.fetchMusic}>Moody Music</button><br/>
-          <Song songObj={this.state.songs[0]}/>
-          <Song songObj={this.state.songs[1]}/>
-          <Song songObj={this.state.songs[2]}/>
-          <Song songObj={this.state.songs[3]}/>
-          <Song songObj={this.state.songs[4]}/>
-          <Song songObj={this.state.songs[5]}/>
-          
+          {this.state.songs.map((song,i) => 
+            <Song key={i} songObj={song}/>
+          )}          
         </>
       );
     } else {
