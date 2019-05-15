@@ -41,13 +41,14 @@ class TakePhoto extends Component {
     if (this.state.redirectToPlaylistPage) {
       return <Redirect to="/playlist" />
     }
-    
+    console.log(this.props);
     return (
       <React.Fragment>
         <ErrorMessage message={this.state.errorMessage} />
         <Image 
           photoUploadUpdateHandler={this.updatePhotoUploadStatus} 
-          handleErrorMessage={this.handleErrorMessage} />
+          handleErrorMessage={this.handleErrorMessage}  
+          updateEmotion={this.props.updateEmotion}/>
         <CameraImageUploader 
           photoUploadUpdateHandler={this.updatePhotoUploadStatus}
           handleErrorMessage={this.handleErrorMessage} ref={(camera) => {this.camera = camera }}/>
