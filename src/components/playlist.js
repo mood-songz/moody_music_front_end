@@ -18,7 +18,7 @@ class Playlist extends React.Component {
     superagent.get(`${backendUrl}/recommendations`)
       // .set({emotion_id: this.props.emotion_id})
       .then(result => {
-        this.setState({songs : JSON.parse(result.text)})
+        this.setState({songs : JSON.parse(result.text)});
       })
       .catch((error)=> {
         console.log('THERE\'S BEEN AN ERROR WITH SUPERAGENT', error);
