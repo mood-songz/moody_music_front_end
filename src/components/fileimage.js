@@ -28,6 +28,7 @@ fileSelectedHandler= async e=>{
         if(this.props.updateEmotion){
           this.props.updateEmotion(emotionData.emotion);
           this.setState({userEmotion: emotionData.emotion});
+          this.props.photoUploadUpdateHandler();
         }     
      }
      }
