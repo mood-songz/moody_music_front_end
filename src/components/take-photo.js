@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
-import Image from './Image.js';
+import Image from './image.js';
 import CameraImageUploader from './camera-image-uploader.js';
 import ErrorMessage from './error-message.js';
 
