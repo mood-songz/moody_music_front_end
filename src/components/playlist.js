@@ -35,12 +35,10 @@ class Playlist extends React.Component {
   render() {
     if (this.state.songs.length > 0) {
       return (
-        <>
-          <button onClick={this.fetchMusic}>Moody Music</button><br/>
+        <div>
           {this.state.songs.map((song,i) => 
-            <Song key={i} songObj={song}/>
-          )}          
-        </>
+          <Song key={i} songObj={song}/>)}
+        </div>
       );
     } else {
       return (

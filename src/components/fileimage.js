@@ -38,7 +38,7 @@ fileSelectedHandler= async e=>{
 }
 //if the image is not including face, set url to empty string 
 updateFileImage = () =>{
-  this.setState({selectedFile: ''});
+  this.setState({selectedFile: '', file: null});
 }
 
 //send user error message if they upload incorrectly
