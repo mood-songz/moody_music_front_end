@@ -6,13 +6,14 @@ import Register from './register.js';
 import Home from './home.js';
 import Footer from './footer.js';
 import Playlist from './playlist.js';
+import TakePhoto from './take-photo.js';
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-
+      currentUser: {}
     }
   }
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/about" component={About} />
             <Route exact path="/playlist" component={Playlist} />
+            <Route exact path="/takephoto" component={TakePhoto} currentUser={this.state.currentUser}/>
           </Switch>
         </main>
         <Footer />
