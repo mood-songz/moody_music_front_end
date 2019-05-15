@@ -40,6 +40,9 @@ class CameraImageUploader extends Component {
     return (
       <div>
         <h3>Take a photo</h3>
+          <form>
+            <input type="checkbox"></input>I allow Moody Songz to take my picture.
+          </form>
         {video}
         <CameraPhoto />
       </div>
