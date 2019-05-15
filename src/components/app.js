@@ -13,9 +13,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentUser: {}
+      currentUser: {},
+      userEmotion: ''
     }
   }
+  updateEmotion = (userEmotion) => {
+   this.setState ({userEmotion})
+  };
+
 
   render() {
     return (
@@ -27,8 +32,13 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/playlist" component={Playlist} />
-            <Route exact path="/takephoto" component={TakePhoto} currentUser={this.state.currentUser}/>
+            <Route exact path="/playlist" 
+              render = {(props) => <Playlist {...props} userEmotion={this.state.userEmotion}/>}
+             />
+            <Route exact path="/takephoto" 
+              render = {(props) => <TakePhoto {...props} currentUser={this.state.currentUser} 
+              updateEmotion={this.updateEmotion}/>}
+           />          
           </Switch>
         </main>
         <Footer />
