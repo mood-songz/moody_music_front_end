@@ -50,7 +50,7 @@ class TakePhoto extends Component {
           handleErrorMessage={this.handleErrorMessage} />
         <CameraImageUploader 
           photoUploadUpdateHandler={this.updatePhotoUploadStatus}
-          handleErrorMessage={this.handleErrorMessage} />
+          handleErrorMessage={this.handleErrorMessage} ref={(camera) => {this.camera = camera }}/>
       </React.Fragment>
     );
   }
