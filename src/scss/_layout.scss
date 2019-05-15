@@ -15,4 +15,21 @@ nav ul{
   }
 }
 
-//Main styling layout
+// Intro page styling layout
+
+.intro h1:nth-child(2){
+  text-indent: 25%;
+}
+.intro h1{
+  margin-left: 10%;
+}
+
+.intro div{
+  display: flex;
+  justify-content: center;  
+}
+.intro ul{
+  display: flex;
+  justify-content: space-around;
+}
+// Main styling layout
