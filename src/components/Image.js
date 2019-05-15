@@ -23,7 +23,7 @@ await this.setState({
 render(){                                                
     return(
       <div className="App">
-      <form action="http://localhost:8000/upload" encType="multipart/form-data" method="POST"> 
+      <form action="http://localhost:8080/upload" encType="multipart/form-data" method="POST"> 
       <input type="file" name="theFile" onChange={this.fileSelectedHandler} accept="image/*"/>
       <input type="submit"  value="Upload Photo" />
       </form>
