@@ -7,10 +7,10 @@ const Header = props => {
       <nav>
         <ul>
           <li>
-            <Link to="/register">Register</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/register">Register</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
