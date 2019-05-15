@@ -1,0 +1,33 @@
+@import 'vars';
+
+body{
+  font-family: $font-family;
+  background-color: $background-color;
+}
+
+h3{
+  font-family: $font-family2;
+}
+
+
+nav ul{
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 20%;
+}
+
+nav ul a:hover{
+  color: rgb(10, 119, 16);
+
+
+}
+nav {
+  background-color: grey;
+  border: 2px solid grey;
+  width: auto;
+  font-size: 30PX;
+}
