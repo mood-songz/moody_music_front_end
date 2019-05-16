@@ -20,11 +20,11 @@ class Playlist extends React.Component {
   }
 
   fetchMusic = () => {
-    // event.preventDefault();
+    event.preventDefault();
     let backendUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:8080' : 'https://desolate-shelf-44063.herokuapp.com';
 
     superagent.get(`${backendUrl}/recommendations/${this.props.userEmotion}`)
-      // .set({emotion_id: this.props.emotion_id})
+      .set({emotion_id: this.props.emotion_id})
       .then(result => {
         this.setState({songs : JSON.parse(result.text)});
       })
@@ -34,14 +34,15 @@ class Playlist extends React.Component {
   }
 
   render() {
+
     if (this.state.songs.length > 0) {
       return (
         <React.Fragment>
           <PhotoContainer userEmotion={this.props.userEmotion}/>
-          <div>
+          <div className="playlist">
             {this.state.songs.map((song,i) => 
 
-              <Song key={i} songObj={song}/>
+             <div> <Song key={i} songObj={song}/> </div>
             )}          
 
           </div>
@@ -52,6 +53,29 @@ class Playlist extends React.Component {
         <button onClick={this.fetchMusic}>Moody Music</button>
       );
     }
+
+    // return(
+    // <>
+    // <PhotoContainer userEmotion={this.props.userEmotion}/>
+    // <div className="playlist">
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div>
+    // </div>
+    // </>
+    // )
+
   }
 }
 

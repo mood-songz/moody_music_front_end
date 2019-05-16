@@ -54,4 +54,3 @@ class CameraImageUploader extends Component {
 
 export default CameraImageUploader;
 
-// newcomment
