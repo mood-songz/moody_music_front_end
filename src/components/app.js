@@ -17,10 +17,16 @@ class App extends Component {
       userEmotion: ''
     }
   }
-  updateEmotion = (userEmotion) => {
-   this.setState ({userEmotion})
-  };
 
+  // updates the current user of the application
+  currentUserHandler = currentUser => {
+    this.setState({currentUser});
+  }
+
+  //updates the emotion of the user
+  updateEmotion = userEmotion => {
+    this.setState ({userEmotion});
+  };
 
   render() {
     return (
@@ -30,8 +36,9 @@ class App extends Component {
         <main className="content">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/register" component={Register} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/register" 
+              render = {(props) => <Register {...props} currentUser={this.state.currentUser}/>}/>
             <Route exact path="/playlist" 
               render = {(props) => <Playlist {...props} userEmotion={this.state.userEmotion}/>}
              />

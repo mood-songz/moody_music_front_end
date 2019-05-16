@@ -1,6 +1,7 @@
 import React from 'react';
 import superagent from 'superagent';
 import Song from './song.js';
+import PhotoContainer from './photo-container.js';
 
 class Playlist extends React.Component {
   constructor(props){
@@ -35,13 +36,16 @@ class Playlist extends React.Component {
   render() {
     if (this.state.songs.length > 0) {
       return (
-        <div>
-          {this.state.songs.map((song,i) => 
+        <React.Fragment>
+          <PhotoContainer userEmotion={this.props.userEmotion}/>
+          <div>
+            {this.state.songs.map((song,i) => 
 
-            <Song key={i} songObj={song}/>
-          )}          
+              <Song key={i} songObj={song}/>
+            )}          
 
-        </div>
+          </div>
+        </React.Fragment>
       );
     } else {
       return (
@@ -52,4 +56,3 @@ class Playlist extends React.Component {
 }
 
 export default Playlist;
-// newcomment
