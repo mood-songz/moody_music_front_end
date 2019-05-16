@@ -14,7 +14,10 @@ class PhotoContainer extends Component {
       imageSource = imageSources[2]
     }
     return (
-      <img src={imageSource} alt={this.props.userEmotion}/>
+      <div className="emotion-container">
+        <img  src={imageSource} alt={this.props.userEmotion}/>
+        <h3>You look {this.props.userEmotion}</h3>
+      </div>
     );
   }
 }
