@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import { Route, BrowserRouter,  Switch } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart , faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import Header from './header.js';
 import About from './about.js';
 import Register from './register.js';
@@ -7,6 +11,8 @@ import Home from './home.js';
 import Footer from './footer.js';
 import Playlist from './playlist.js';
 import TakePhoto from './take-photo.js';
+
+library.add(faHeart, faTimes)
 
 class App extends Component {
   constructor(props){

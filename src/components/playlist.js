@@ -42,6 +42,7 @@ class Playlist extends React.Component {
             {this.state.songs.map((song,i) => 
 
               <Song key={i} songObj={song}/>
+              
             )}          
 
           </div>
