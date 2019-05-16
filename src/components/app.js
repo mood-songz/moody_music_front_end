@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <React.Fragment>
+      <div className={this.state.userEmotion} >
         <Header />
         <main className="content">
           <Switch>
@@ -49,7 +49,7 @@ class App extends Component {
           </Switch>
         </main>
         <Footer />
-      </React.Fragment>
+      </div>
     </BrowserRouter>
     )
   }

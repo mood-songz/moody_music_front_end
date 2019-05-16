@@ -18,22 +18,23 @@ nav ul{
 
 // Intro page styling layout
 
-.intro h1:nth-child(2){
-  text-indent: 35%;
-}
-.intro h1{
-  margin-left: 10%;
-}
+// .intro h1:nth-child(2){
+//   text-indent: 35%;
+//}
 
-.intro div{
-  display: flex;
-  justify-content: center;  
-}
-.intro ul{
-  display: flex;
-  justify-content: space-around;
-  margin-left: 20px;
-  margin-right: 20px;
+.intro {
+  
+  div{
+    display: flex;
+    justify-content: center;  
+  }
+
+  ul{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 // Main styling layout
 
@@ -43,7 +44,7 @@ nav ul{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 2.5%;
   height: 30em;
   overflow-y: scroll;
 
