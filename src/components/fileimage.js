@@ -5,6 +5,7 @@ class Image extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+
       selectedFile: '',
       file: null,
       userEmotion: '',
@@ -30,6 +31,7 @@ fileSelectedHandler= async e=>{
           this.setState({userEmotion: emotionData.emotion});
           this.props.photoUploadUpdateHandler();
         }     
+
      } else {
      this.updateFileImage();
       this.props.handleErrorMessage('Please upload a new image with a face');
@@ -39,6 +41,7 @@ fileSelectedHandler= async e=>{
 //if the image is not including face, set url to empty string 
 updateFileImage = () =>{
   this.setState({selectedFile: '', file: null});
+
 }
 
 //send user error message if they upload incorrectly
@@ -58,3 +61,5 @@ render(){
 }
 
 export default Image;
+
+// newcomment

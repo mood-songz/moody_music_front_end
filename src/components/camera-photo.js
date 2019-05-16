@@ -27,3 +27,4 @@ class CameraPhoto extends Component{
 }
 
 export default CameraPhoto;
+// newcomment
