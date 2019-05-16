@@ -52,3 +52,5 @@ render(){
 }
 
 export default Image;
+
+// newcomment
