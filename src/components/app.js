@@ -38,7 +38,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/register" 
-              render = {(props) => <Register {...props} currentUser={this.state.currentUser}/>}/>
+              render = {(props) => <Register {...props} currentUser={this.state.currentUser} currentUserHandler={this.currentUserHandler}/>}/>
             <Route exact path="/playlist" 
               render = {(props) => <Playlist {...props} userEmotion={this.state.userEmotion}/>}
              />
