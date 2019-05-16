@@ -90,9 +90,6 @@ class RegistrationForm extends Component {
         <button type='submit' value='register'>
           Sign Me Up
         </button>
-        <button type='submit' value='sign in'>
-          I have an account
-        </button>
       </form>
     </div>
     );   
