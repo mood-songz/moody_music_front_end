@@ -4,5 +4,3 @@ import App from './components/app.js';
 import './scss/core.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// newcomment

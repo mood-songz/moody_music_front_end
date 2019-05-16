@@ -58,4 +58,3 @@ class TakePhoto extends Component {
 };
 
 export default TakePhoto;
-// newcomment
