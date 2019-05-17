@@ -4,240 +4,349 @@ h1, h2, h3, h4, h5, a {
   font-weight: 900;
   margin: 5px;
 }
-//SAD THEME{
-// body{
-//   font-family: $font-family;
-//   background-color: $background-color-sad-body;
-//   background-image: linear-gradient(to bottom, $background-color-sad-body2 20%, $background-color-sad-body, $background-color-sad-body2);
-// }
-
-// h3{
-//   font-family: $font-family-intro;
-//   font-size: 30px;
-//   margin-bottom: 20px;
-// }
 
 
-// nav ul{
-//   list-style: none;
-// }
-// nav ul a {
-//   font-family: $font-family-nav-default;
-//   color: $background-color-sad-font;
-//   text-decoration: none;
-//   padding: 15px;
-// }
+// SAD SCHEME
+.sad {
 
-// nav ul a:hover{
-//   color: $background-color-sad-font-hover;
+  main {
+    font-family: $font-family;
+    background-color: $background-color-sad-body;
+    background-image: linear-gradient(to bottom, $background-color-sad-body2 20%, $background-color-sad-body, $background-color-sad-body2);
+    color: whitesmoke;
+
+  }
+  
+  h3 {
+    font-family: $font-family-intro;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  h2 {
+    font-family: $font-family-sad;
+    font-size: 40px;
+    padding-top: 20px;
+    color: whitesmoke;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  nav ul a {
+    font-family: $font-family-nav-default;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  nav ul a:hover {
+    color: $background-color-sad-font-hover;
+  
+  
+  }
+  nav {
+    background-color: $background-color-sad-nav-back;
+    background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
+    width: 100%;
+    font-size: 30PX;
+    padding: 25px;
+    margin-bottom: -5px;
+  }
+  
+  // Intro page styling
+  
+  .intro {
+
+    h1{
+      font-size: 40px;
+      line-height: 80px;
+      font-family: $font-family-nav-default;
+      color: whitesmoke;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    li{
+      font-family: $font-family-intro;
+      font-size: 28px;
+      color: whitesmoke;
+      border: 2px solid black;
+      width: 10%;
+      margin: 5%;
+      padding: 8%;
+      border-radius: 50%;
+      background-color: $background-color-sad-body2;
+      background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
+      text-align: center;
+    }
+
+    button {
+      font-size: 18px;
+      color: whitesmoke;
+      padding: 1.5% 25% 1.5% 25%;
+      background-color: $background-color-sad-nav-back;
+      background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
+      margin-bottom: 2.5%;
+      font-family: $font-family-nav-default;
+      font-size: 50px;
+      border: none;
+    }
+  
+  button:hover {
+    border: 2px solid black;
+  }
+  
+  }
+
+  .registration {
+    button {
+      background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
+      color: whitesmoke;
+      font-size: 20px;
+
+    }
+
+    h3 {
+      color: whitesmoke;
+    }
+
+  }
+
+  footer {
+    background-color: $background-color-happy-body2;
+  }
+
+}
 
 
-// }
-// nav {
-//   background-color: $background-color-sad-nav-back;
-//   background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
-//   width: 100%;
-//   font-size: 30PX;
-//   padding: 25px;
-// }
-
-// // Intro page styling
-
-// .intro {
-//   h1{
-//     font-size: 40px;
-//     line-height: 80px;
-//     font-family: $font-family-nav-default;
-//     color: $background-color-sad-font;
-//     text-align: center;
-//   }
-//   ul{
-//     list-style: none;
-//     font-size: 20px;
-//     font-weight: 700;
-//   }
-//   li{
-//     font-family: $font-family-intro;
-//     font-size: 28px;
-//     color: $background-color-sad-font;
-//     border: 2px solid black;
-//     width: 10%;
-//     margin: 5%;
-//     padding: 8%;
-//     border-radius: 50%;
-//     background-color: $background-color-sad-body2;
-//     background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
-//     text-align: center;
-//   }
-//   button{
-//     font-size: 18px;
-//     color: $background-color-sad-font;
-//     padding: 1.5% 25% 1.5% 25%;
-//     background-color: $background-color-sad-nav-back;
-//     background-image: linear-gradient(to bottom, $background-color-sad-nav-back 10%, $background-color-sad-body, $background-color-sad-nav-back );
-//     margin-bottom: 2.5%;
-//     font-family: $font-family-nav-default;
-//     font-size: 50px;
-//     border: none;
-//   }
-
-// }
 
 // HAPPY SCHEME
-body{
-  font-family: $font-family;
-  background-color: $background-color-happy-body;
-  background-image: linear-gradient(to bottom, $background-color-happy-font-hover, $background-color-happy-font, $background-color-happy-body2)
-}
 
-h3{
-  font-family: $font-family-intro;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
+.happy {
 
-
-nav ul{
-  list-style: none;
-}
-nav ul a {
-  font-family: $font-family-nav-default;
-  color: black;
-  text-decoration: none;
-  padding: 15px;
-}
-
-nav ul a:hover{
-  color: $background-color-happy-font-hover;
-
-
-}
-nav {
-  background-color: $background-color-happy-nav-back;
-  background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-  width: 100%;
-  font-size: 30PX;
-  padding: 25px;
-}
-
-// Intro page styling
-
-.intro {
-  h1{
-    font-size: 40px;
-    line-height: 80px;
-    font-family: $font-family-nav-default;
-    color: black;
-    text-align: center;
+  main {
+    font-family: $font-family;
+    background-color: $background-color-happy-body;
+    background-image: linear-gradient(to bottom, $background-color-happy-font-hover, $background-color-happy-font, $background-color-happy-body2)
   }
-  ul{
-    list-style: none;
-    font-size: 20px;
-    font-weight: 700;
-  }
-  li{
+  
+  h3 {
     font-family: $font-family-intro;
-    font-size: 28px;
-    color: black;
-    border: 2px solid black;
-    width: 10%;
-    margin: 5%;
-    padding: 8%;
-    border-radius: 50%;
-    background-color: $background-color-happy-body2;
-    background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
-  button{
-    font-size: 18px;
+  
+  h2 {
+    font-family: $font-family-happy;
+    font-size: 40px;
+    padding-top: 20px;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul a {
+    font-family: $font-family-happy-nav;
     color: black;
-    padding: 1.5% 25% 1.5% 25%;
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  nav ul a:hover {
+    color: $background-color-happy-font-hover;
+  
+  
+  }
+  nav {
     background-color: $background-color-happy-nav-back;
-    margin-bottom: 2.5%;
-    font-family: $font-family-nav-default;
     background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-    font-size: 50px;
-    border: none;
+    width: 100%;
+    font-size: 30PX;
+    padding: 25px;
+    margin-bottom: -5px;
+  }
+  
+  // Intro page styling
+  
+  .intro {
+
+    h1 {
+      font-size: 40px;
+      line-height: 80px;
+      font-family: $font-family-happy-nav;
+      color: black;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    li {
+      font-family: $font-family-intro;
+      font-size: 28px;
+      color: black;
+      border: 2px solid black;
+      width: 10%;
+      margin: 5%;
+      padding: 8%;
+      border-radius: 50%;
+      background-color: $background-color-happy-body2;
+      background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
+      text-align: center;
+    }
+
+    button {
+      font-size: 18px;
+      color: black;
+      padding: 1.5% 25% 1.5% 25%;
+      background-color: $background-color-happy-nav-back;
+      margin-bottom: 2.5%;
+      font-family: $font-family-happy-nav;
+      background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
+      font-size: 50px;
+      border: none;
+    }
+  
+  button:hover {
+    border: 2px solid black;
+  }
+    
   }
 
-}
+  .registration {
+    button {
+      background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back);
+      color: black;
+      font-size: 20px;
+    }
 
+    h3 {
+      color: black;
+    }
+    
+  }
+  
+  footer {
+    background-color: $background-color-happy-body2;
+  }
+}
 
 // NEUTRAL SCHEME
-// body{
-  //   font-family: $font-family;
-  //   background-color: $background-color-happy-body;
-  //   background-image: linear-gradient(45deg, $background-color-happy-font-hover, $background-color-happy-font, $background-color-happy-body2)
-  // }
+.meh {
+  main {
+    font-family: $font-family;
+    background-color: $background-color-meh-body;
+    background-image: linear-gradient(to bottom,$background-color-meh-body2 30%, $background-color-meh-font-hover, $background-color-meh-font);
+  }
+    
+  h3 {
+    font-family: $font-family-intro;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+    
+  h2 {
+    font-family: $font-family-meh;
+    color: $background-color-happy-font;    font-size: 40px;
+    padding-top: 20px;
+  }
   
-  // h3{
-  //   font-family: $font-family-intro;
-  //   font-size: 30px;
-  //   margin-bottom: 20px;
-  // }
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul a {
+    font-family: $font-family-nav-default;
+    color: $background-color-meh-font;
+    text-decoration: none;
+    padding: 15px;
+  }
+    
+  nav ul a:hover {
+    color: $background-color-meh-font-hover;
+  }
   
-  
-  // nav ul{
-  //   list-style: none;
-  // }
-  // nav ul a {
-  //   font-family: $font-family-nav-default;
-  //   color: black;
-  //   text-decoration: none;
-  //   padding: 15px;
-  // }
-  
-  // nav ul a:hover{
-  //   color: $background-color-happy-font-hover;
-  
-  
-  // }
-  // nav {
-  //   background-color: $background-color-happy-nav-back;
-  //   background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-  //   width: 100%;
-  //   font-size: 30PX;
-  //   padding: 25px;
-  // }
-  
-  // // Intro page styling
-  
-  // .intro {
-  //   h1{
-  //     font-size: 40px;
-  //     line-height: 80px;
-  //     font-family: $font-family-nav-default;
-  //     color: black;
-  //     text-align: center;
-  //   }
-  //   ul{
-  //     list-style: none;
-  //     font-size: 20px;
-  //     font-weight: 700;
-  //   }
-  //   li{
-  //     font-family: $font-family-intro;
-  //     font-size: 28px;
-  //     color: black;
-  //     border: 2px solid black;
-  //     width: 10%;
-  //     margin: 5%;
-  //     padding: 8%;
-  //     border-radius: 50%;
-  //     background-color: $background-color-happy-body2;
-  //     background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-  //     text-align: center;
-  //   }
-  //   button{
-  //     font-size: 18px;
-  //     color: black;
-  //     padding: 1.5% 25% 1.5% 25%;
-  //     background-color: $background-color-happy-nav-back;
-  //     margin-bottom: 2.5%;
-  //     font-family: $font-family-nav-default;
-  //     background-image: linear-gradient(to bottom, $background-color-happy-nav-back 10%, $background-color-happy-body, $background-color-happy-nav-back );
-  //     font-size: 50px;
-  //     border: none;
-  //   }
-  
-  // }
+  nav {
+    background-color: $background-color-meh-nav-back;
+    background-image: linear-gradient(to bottom, $background-color-meh-nav-back 10%, $background-color-meh-body2, $background-color-meh-nav-back );
+    width: 100%;
+    font-size: 30PX;
+    padding: 25px;
+    margin-bottom: -5px;
+  }
+    
+  // Intro page styling 
+  .intro {
+
+    h1 {
+      font-size: 40px;
+      line-height: 80px;
+      font-family: $font-family-nav-default;
+      color: $background-color-meh-font;      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    li {
+      font-family: $font-family-intro;
+      font-size: 28px;
+      color: $background-color-meh-font;
+      border: 2px solid black;
+      width: 10%;
+      margin: 5%;
+      padding: 8%;
+      border-radius: 50%;
+      background-color: $background-color-meh-body2;
+      background-image: linear-gradient(to bottom, $background-color-meh-nav-back 10%, $background-color-meh-body2, $background-color-meh-nav-back );
+      text-align: center;
+    }
+
+    button {
+      font-size: 18px;
+      color: $background-color-meh-font;
+      padding: 1.5% 25% 1.5% 25%;
+      background-color: $background-color-meh-nav-back;
+      margin-bottom: 2.5%;
+      font-family: $font-family-nav-default;
+      background-image: linear-gradient(to bottom, $background-color-meh-nav-back 20%, $background-color-meh-body2, $background-color-meh-nav-back );
+      font-size: 50px;
+      border: none;
+    }
+
+    button:hover {
+      border: 2px solid black;
+    }
+  }
+
+  .registration {
+    button {
+      background-image: linear-gradient(to bottom, $background-color-meh-nav-back 20%, $background-color-meh-body2, $background-color-meh-nav-back );
+      color: $background-color-meh-font;
+      font-size: 20px;
+    }
+
+    h3 {
+      color: black;
+    }
+    
+  }
+
+  footer {
+      background-color: $background-color-meh-body2;
+  }
+}

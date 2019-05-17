@@ -54,28 +54,6 @@ class Playlist extends React.Component {
       );
     }
 
-    // return(
-    // <>
-    // <PhotoContainer userEmotion={this.props.userEmotion}/>
-    // <div className="playlist">
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div> 
-    //  <div> <Song /> </div>
-    // </div>
-    // </>
-    // )
-
   }
 }
 
