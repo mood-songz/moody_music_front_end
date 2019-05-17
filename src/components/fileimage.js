@@ -18,10 +18,10 @@ fileSelectedHandler= async e=>{
     selectedFile: URL.createObjectURL(e.target.files[0]),
     file:e.target.files[0]
   })
-  console.log(this.state.selectedFile);
-  let backendUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:8080' : '';
-  let backendUploadUrl = `${backendUrl}/upload`;   
-  console.log(this.state.file); 
+
+  let backendUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:8080' : 'https://desolate-shelf-44063.herokuapp.com';
+  let backendUploadUrl = `${backendUrl}/upload`;    
+
   let emotionData = await superagent.post(backendUploadUrl).attach('theFile',this.state.file)
      .then(imageUploadResponse => imageUploadResponse.body) 
   //if we have response we update userEmotion 
@@ -62,5 +62,3 @@ render(){
 }
 
 export default Image;
-
-// newcomment

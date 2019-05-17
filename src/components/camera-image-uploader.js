@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import Webcam from "react-webcam";
 
-/*
-code for camera taken from
-http://sviridovserg.com/2017/09/18/react-photo-capture/
-*/
 class CameraImageUploader extends Component {
   constructor(props) {
     super(props);
@@ -14,16 +10,9 @@ class CameraImageUploader extends Component {
   }
   enableWebcam = () => this.setState({ webcamEnabled: true });
 
-
-  videoError = () => {
-
-  }
   updateErrorMessage = errorMessage => {
     this.props.handleErrorMessage(errorMessage);
   }
-
-
-
 
   handleClick = async () => {
     const screenshot = this.webcam.getScreenshot();
@@ -37,9 +26,7 @@ class CameraImageUploader extends Component {
     const blobUrl = URL.createObjectURL(blob);
     await this.setState({imgUrl: blobUrl});
     console.log(this.state.imgUrl);
-
-
-
+    
     await fetch(blobUrl).then(response => response.blob())
     .then(blob => { 
       const fd = new FormData();
@@ -80,8 +67,10 @@ class CameraImageUploader extends Component {
       <div>
         <h1>Take photo here</h1>
         {this.state.webcamEnabled ? (
-          <Webcam audio={false} height={300}
-width={300}  screenshotFormat="image/jpeg"  ref={node => this.webcam = node} />
+          <Webcam audio={false} height={300} 
+            width={300}  
+            screenshotFormat="image/jpeg"  
+            ref={node => this.webcam = node} />
         ) : (
           <button type="button" onClick={this.enableWebcam}>
             Enable webcam
@@ -105,4 +94,3 @@ width={300}  screenshotFormat="image/jpeg"  ref={node => this.webcam = node} />
 
 export default CameraImageUploader;
 
-// newcomment

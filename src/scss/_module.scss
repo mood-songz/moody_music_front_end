@@ -3,4 +3,22 @@
 .pics{
   border-radius: 60%;
 }
-// newcomment
+// SAD THEME
+// .emotion-container {
+//   text-align: center;
+//   margin-top: 50px;
+//   margin-bottom: 50px;
+//   font-family: $font-family-sad;
+// }
+
+.emotion-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: $font-family-happy;
+}
+
+.emotion-container img {
+  width: 200px;
+  height: 200px;
+}

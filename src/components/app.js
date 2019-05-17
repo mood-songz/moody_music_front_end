@@ -17,21 +17,28 @@ class App extends Component {
       userEmotion: ''
     }
   }
-  updateEmotion = (userEmotion) => {
-   this.setState ({userEmotion})
-  };
 
+  // updates the current user of the application
+  currentUserHandler = currentUser => {
+    this.setState({currentUser});
+  }
+
+  //updates the emotion of the user
+  updateEmotion = userEmotion => {
+    this.setState ({userEmotion});
+  };
 
   render() {
     return (
       <BrowserRouter>
-      <React.Fragment>
+      <div className={this.state.userEmotion} >
         <Header />
         <main className="content">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/register" component={Register} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/register" 
+              render = {(props) => <Register {...props} currentUser={this.state.currentUser} currentUserHandler={this.currentUserHandler}/>}/>
             <Route exact path="/playlist" 
               render = {(props) => <Playlist {...props} userEmotion={this.state.userEmotion}/>}
              />
@@ -42,11 +49,10 @@ class App extends Component {
           </Switch>
         </main>
         <Footer />
-      </React.Fragment>
+      </div>
     </BrowserRouter>
     )
   }
 }
 
 export default App;
-// newcomment

@@ -1,6 +1,7 @@
 import React from 'react';
 import superagent from 'superagent';
 import Song from './song.js';
+import PhotoContainer from './photo-container.js';
 
 class Playlist extends React.Component {
   constructor(props){
@@ -23,7 +24,7 @@ class Playlist extends React.Component {
     let backendUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:8080' : 'https://desolate-shelf-44063.herokuapp.com';
 
     superagent.get(`${backendUrl}/recommendations/${this.props.userEmotion}`)
-      // .set({emotion_id: this.props.emotion_id})
+      .set({emotion_id: this.props.emotion_id})
       .then(result => {
         this.setState({songs : JSON.parse(result.text)});
       })
@@ -33,23 +34,49 @@ class Playlist extends React.Component {
   }
 
   render() {
+
     if (this.state.songs.length > 0) {
       return (
-        <div>
-          {this.state.songs.map((song,i) => 
+        <React.Fragment>
+          <PhotoContainer userEmotion={this.props.userEmotion}/>
+          <div className="playlist">
+            {this.state.songs.map((song,i) => 
 
-            <Song key={i} songObj={song}/>
-          )}          
+             <div> <Song key={i} songObj={song}/> </div>
+            )}          
 
-        </div>
+          </div>
+        </React.Fragment>
       );
     } else {
       return (
         <button onClick={this.fetchMusic}>Moody Music</button>
       );
     }
+
+    // return(
+    // <>
+    // <PhotoContainer userEmotion={this.props.userEmotion}/>
+    // <div className="playlist">
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div> 
+    //  <div> <Song /> </div>
+    // </div>
+    // </>
+    // )
+
   }
 }
 
 export default Playlist;
-// newcomment
