@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import Image from './fileimage.js';
-import CameraImageUploader from './camera-image-uploader.js';
 import ErrorMessage from './error-message.js';
 
 class TakePhoto extends Component {
@@ -49,9 +48,6 @@ class TakePhoto extends Component {
           photoUploadUpdateHandler={this.updatePhotoUploadStatus} 
           handleErrorMessage={this.handleErrorMessage}  
           updateEmotion={this.props.updateEmotion}/>
-        <CameraImageUploader 
-          photoUploadUpdateHandler={this.updatePhotoUploadStatus}
-          handleErrorMessage={this.handleErrorMessage} ref={(camera) => {this.camera = camera }}/>
       </React.Fragment>
     );
   }
