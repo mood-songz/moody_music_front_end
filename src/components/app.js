@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       currentUser: {},
-      userEmotion: ''
+      userEmotion: 'meh'
     }
   }
 
