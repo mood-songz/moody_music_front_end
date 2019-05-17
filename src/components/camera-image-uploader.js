@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import CameraPhoto from './camera-photo.js';
+import Webcam from "react-webcam";
+
 /*
 code for camera taken from
 http://sviridovserg.com/2017/09/18/react-photo-capture/
@@ -7,24 +8,12 @@ http://sviridovserg.com/2017/09/18/react-photo-capture/
 class CameraImageUploader extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       videoSrc: {}
     };
   }
+  enableWebcam = () => this.setState({ webcamEnabled: true });
 
-  componentDidMount = () => {
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-    if (navigator.getUserMedia) {
-      navigator.getUserMedia({video: true}, this.handleVideo, this.videoError);
-    }
-  }
-
-  handleVideo = (stream) => {
-    // Update the state, triggering the component to re-render with the correct stream
-    this.setState({ videoSrc: new MediaSource() });
-    this.videoElement.play();
-  }
 
   videoError = () => {
 
@@ -34,18 +23,80 @@ class CameraImageUploader extends Component {
   }
 
 
+
+
+  handleClick = async () => {
+    const screenshot = this.webcam.getScreenshot();
+    await this.setState({ screenshot });
+    console.log(this.state.screenshot);
+    const contentType = 'image/jpeg';
+
+    let base64String = await this.state.screenshot; 
+    let base64Image = await base64String.split(',')[1];
+    const blob = this.b64toBlob(base64Image, contentType);
+    const blobUrl = URL.createObjectURL(blob);
+    await this.setState({imgUrl: blobUrl});
+    console.log(this.state.imgUrl);
+
+
+
+    await fetch(blobUrl).then(response => response.blob())
+    .then(blob => { 
+      const fd = new FormData();
+      fd.append("theFile", blob, "userimage.jpg"); 
+    return  fetch("http://localhost:8080/upload", {method:"POST", body:fd})
+    })
+    .then(response => response.ok)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+  
+  }
+
+  b64toBlob = (b64Data, contentType='', sliceSize=512) => {
+    const byteCharacters = atob(b64Data);
+    const byteArrays = [];
+  
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      const slice = byteCharacters.slice(offset, offset + sliceSize);
+      const byteNumbers = new Array(slice.length);
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
+    }   
+    const blob = new Blob(byteArrays, {type: contentType});
+    return blob;
+  }
+
+  offWebcam = () => {
+    this.setState({screenshot: null});
+    this.setState({imgUrl: ''});
+    this.setState({ webcamEnabled: false });
+}
+
   render() {
-    const video = (<video id="video" width="640" height="480" className="cameraFrame" src={this.state.videoSrc} autoPlay="true"
-      ref={(input) => { this.videoElement = input; }}></video>);
     return (
       <div>
-        <h3>Take a photo</h3>
-          <form>
-            <input type="checkbox"></input>I allow Moody Songz to take my picture.
-          </form>
-        {video}
-        <CameraPhoto />
-      </div>
+        <h1>Take photo here</h1>
+        {this.state.webcamEnabled ? (
+          <Webcam audio={false} height={300}
+width={300}  screenshotFormat="image/jpeg"  ref={node => this.webcam = node} />
+        ) : (
+          <button type="button" onClick={this.enableWebcam}>
+            Enable webcam
+          </button>
+        )}
+             <h2>Screenshots</h2>
+          <div className='screenshots'>
+            <div className='controls'>
+              <button onClick={this.handleClick}>capture</button>
+              <button onClick={this.offWebcam}> Off Camera </button>
+            </div>
+            {this.state.screenshot ? <img src={this.state.screenshot}  name="theFile" alt="" /> : null}
+          </div>
+        </div>
+       
     );
   }
 
