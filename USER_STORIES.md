@@ -1,7 +1,7 @@
 ## Mood Songz ###
  -	an app that allows you to listen to songs depending on your mood.
 use facial recognition software to access the current mood by the snap of a camera? or uploading a current picture
-## User stories ###
+# User stories ###
 
 
 ## Registration/Signup
