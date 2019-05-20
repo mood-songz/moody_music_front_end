@@ -42,13 +42,13 @@ class TakePhoto extends Component {
     }
     console.log(this.props);
     return (
-      <React.Fragment>
+      <div className="image-uploads">
         <ErrorMessage message={this.state.errorMessage} />
         <Image 
           photoUploadUpdateHandler={this.updatePhotoUploadStatus} 
           handleErrorMessage={this.handleErrorMessage}  
           updateEmotion={this.props.updateEmotion}/>
-      </React.Fragment>
+      </div>
     );
   }
 };
