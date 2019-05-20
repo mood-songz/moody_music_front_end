@@ -9,7 +9,7 @@ class Image extends React.Component {
     this.state = {
       selectedFile: '',
       file: null,
-      userEmotion: 'default_emotion',
+      userEmotion: 'defaultEmotion',
       errorMessage: '',
       webcamEnabled: false,
       screenshot: '',
@@ -24,7 +24,7 @@ class Image extends React.Component {
 
   componentWillMount() {
     if(this.state.userEmotion) {
-      this.setState({userEmotion: 'default_emotion'});
+      this.setState({userEmotion: 'defaultEmotion'});
     }
     this.updateFileImage();
   }
@@ -86,8 +86,8 @@ class Image extends React.Component {
   }
   //if the image is not including face, set url to empty string 
   updateFileImage = () => {
-    this.props.updateEmotion('default_emotion');
-    this.setState({selectedFile: '', file: null, userEmotion: 'default_emotion', screenshot: '', imgUrl: '',
+    this.props.updateEmotion('defaultEmotion');
+    this.setState({selectedFile: '', file: null, userEmotion: 'defaultEmotion', screenshot: '', imgUrl: '',
     blobUrl: ''});
   }
 
