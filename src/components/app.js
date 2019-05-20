@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       currentUser: {},
-      userEmotion: 'meh'
+      userEmotion: 'default_emotion'
     }
   }
 
