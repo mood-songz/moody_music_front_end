@@ -132,7 +132,7 @@ class Image extends React.Component {
           {this.state.screenshot ? <img src={this.state.screenshot} name="theFile" alt="" width={250} height={250}/> : null}
         </div>
 
-        <h1>Take photo here</h1>
+        <h3>Take photo here</h3>
         {this.state.webcamEnabled ? (
           <>
             <Webcam audio={false} height={300} 
