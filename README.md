@@ -11,6 +11,7 @@ http://www.moodsongz.com
 ## Technologies used
 - Front end built on React (using create-react-app)
 - Heroku for Deployment
+- React Webcam 
 
 
 ## Instructions to run project locally
